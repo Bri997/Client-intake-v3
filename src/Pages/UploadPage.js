@@ -13,13 +13,13 @@
 import React from 'react'
 import Dropzone from 'react-dropzone-uploader'
 import 'react-dropzone-uploader/dist/styles.css'
-import ReactS3Uploader from 'react-s3-uploader'
+// import ReactS3Uploader from 'react-s3-uploader'
 
-const AWS = require('aws-sdk')
-const bucketName = 'ql-client-upload'
+// const AWS = require('aws-sdk')
+// const bucketName = 'ql-client-upload'
 
-const bucketRegion = ''
-const IdentityPoolId = 'arn:aws:s3:::ql-client-upload'
+// const bucketRegion = ''
+// const IdentityPoolId = 'arn:aws:s3:::ql-client-upload'
 
 // AWS.config.update({
 //   region: bucketRegion,
@@ -38,7 +38,7 @@ import 'react-dropzone-uploader/dist/styles.css'
 import Dropzone from 'react-dropzone-uploader'
 **/
 
-const MyUploader = () => {
+const UploadPage = () => {
   // specify upload params and url for your files
   const getUploadParams = ({ meta }) => {
     return { url: 'https://httpbin.org/post' }
@@ -65,4 +65,4 @@ const MyUploader = () => {
   )
 }
 
-export default MyUploader
+export default UploadPage
