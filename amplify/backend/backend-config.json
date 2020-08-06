@@ -1,6 +1,6 @@
 {
 	"auth": {
-		"clientintakev359b32055": {
+		"clientintakev3a6934c77": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": [],

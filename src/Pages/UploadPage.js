@@ -3,28 +3,35 @@
 // https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/s3/s3_photoExample.js
 // https://levelup.gitconnected.com/upload-image-directly-from-react-app-to-amazon-s3-856280c62e45
 // https://react-dropzone-uploader.js.org/docs/s3
+// https://awesomeopensource.com/project/fortana-co/react-dropzone-uploader
+// https://blog.webiny.com/upload-files-to-aws-s3-using-pre-signed-post-data-and-a-lambda-function-7a9fb06d56c1
+// https://medium.com/@lakshmanLD/upload-file-to-s3-using-lambda-the-pre-signed-url-way-158f074cda6c
+
 
 // ^^ use this
 
 import React from 'react'
 import Dropzone from 'react-dropzone-uploader'
+import 'react-dropzone-uploader/dist/styles.css'
+import ReactS3Uploader from 'react-s3-uploader'
 
 const AWS = require('aws-sdk')
-const bucketName = ''
+const bucketName = 'ql-client-upload'
+
 const bucketRegion = ''
-const IdentityPoolId = ''
+const IdentityPoolId = 'arn:aws:s3:::ql-client-upload'
 
-AWS.config.update({
-  region: bucketRegion,
-  credentials: new AWS.CognitoIdentityCredentials({
-    IdentityPoolId: IdentityPoolId,
-  }),
-})
+// AWS.config.update({
+//   region: bucketRegion,
+//   credentials: new AWS.CognitoIdentityCredentials({
+//     IdentityPoolId: IdentityPoolId,
+//   }),
+// })
 
-const s3 = new AWS.S3({
-  apiVersion: '2006-03-01',
-  params: { Bucket: bucketName },
-})
+// const s3 = new AWS.S3({
+//   apiVersion: '2006-03-01',
+//   params: { Bucket: bucketName },
+// })
 
 /**
 import 'react-dropzone-uploader/dist/styles.css'
